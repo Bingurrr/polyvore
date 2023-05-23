@@ -6,6 +6,8 @@ INCEPTION_CHECKPOINT="model/inception_v3.ckpt"
 # Directory to save the model.
 MODEL_DIR="model/bi_lstm/"
 
+source activate env
+
 # Run the training code.
 python polyvore/train.py \
   --input_file_pattern="data/tf_records/train-no-dup-?????-of-00128" \

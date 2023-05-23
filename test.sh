@@ -10,11 +10,10 @@ CHECKPOINT_DIR="model/final_model/model.ckpt-34865"
 
 source activate env
 
-python polyvore/run_inference.py \
+python polyvore/find_set.py \
   --checkpoint_path=${CHECKPOINT_DIR} \
-  --json_file="data/label/musinsa.json" \
-  --image_dir="data/img/" \
-  --feature_file="data/features/test_features_musinsa.pkl" \
+  --json_file="/home/park/capstone/polyvore/polyvore/new_data0.json" \
+  --image_dir="/home/park/capstone/polyvore/data/add_clothes/1" \
   --rnn_type="lstm"
 
 # # Extract features of Bi-LSTM without VSE

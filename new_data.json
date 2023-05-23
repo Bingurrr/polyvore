@@ -1,0 +1,44 @@
+{
+    "name": "clothes",
+    "items": [
+        {
+            "name": "white Tshrit",
+            "price": 20,
+            "categoryid": 894,
+            "image": "http://img2.polyvoreimg.com/cgi/img-thing?.out=jpg&size=m&tid=102972440",
+            "likes": 20,
+            "index": 1
+        },
+        {
+            "name": "short indigo pants",
+            "price": 20,
+            "categoryid": 4133,
+            "image": "http://img2.polyvoreimg.com/cgi/img-thing?.out=jpg&size=m&tid=103394173",
+            "likes": 20,
+            "index": 3
+        },
+        {
+            "name": "blue gray shoes",
+            "price": 36.0,
+            "categoryid": 1153,
+            "image": "http://img1.polyvoreimg.com/cgi/img-thing?.out=jpg&size=m&tid=94989504",
+            "likes": 254,
+            "index": 4
+        },
+        {
+            "price": 20,
+            "name": "",
+            "categoryid": 362,
+            "image": "",
+            "likes": 20,
+            "index": 3
+        }
+    ],
+    "set_url": "",
+    "image": "",
+    "desc": "",
+    "likes": 100,
+    "date": "years",
+    "views": 100,
+    "set_id": 0
+}
