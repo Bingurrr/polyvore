@@ -124,7 +124,7 @@ def main(_):
     # Load pre-computed image features.
     with open(FLAGS.feature_file, "rb") as f:
       test_data = pkl.load(f)
-    test_ids = test_data.keys()
+    test_ids = list(test_data.keys())
     test_feat = np.zeros((len(test_ids) + 1,
                     len(test_data[test_ids[0]]["image_rnn_feat"])))
     # test_feat has one more zero vector as the representation of END of

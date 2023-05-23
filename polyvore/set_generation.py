@@ -90,7 +90,7 @@ def run_forward_rnn(sess, test_idx, test_feat, num_lstm_units):
     next_image = np.argsort(-curr_score)[0][0]
     # 0.00001 is used as a probablity threshold to stop the generation.
     # i.e, if the prob of end-of-set is larger than 0.00001, then stop.
-    if next_image == test_feat.shape[0] - 1 or curr_score[0][-1] > 0.00001:
+    if next_image == test_feat.shape[0] - 1 : # or curr_score[0][-1] > 0.00001: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
       # print('OVER')
       break
     else:
@@ -176,7 +176,7 @@ def run_set_inference(sess, set_name, test_ids, test_feat, num_lstm_units):
     try:
       test_idx.append(test_ids.index(name))
     except:
-      print('not found')
+      print('not found1')
       return
 
   # dynamic search
@@ -243,6 +243,26 @@ def nn_search(i, test_emb, word_vec):
 
 def main(_):
   # Build the inference graph.
+# 폴더 경로
+  folder_path = '/home/park/capstone/polyvore/results'
+
+  # 폴더 내의 파일들을 순회하며 삭제
+  for file_name in os.listdir(folder_path):
+      file_path = os.path.join(folder_path, file_name)
+      
+      if os.path.isfile(file_path):
+          os.remove(file_path)
+
+  # 폴더 경로
+  folder_path = '/home/park/capstone/polyvore/final_set'
+
+  # 폴더 내의 파일들을 순회하며 삭제
+  for file_name in os.listdir(folder_path):
+      file_path = os.path.join(folder_path, file_name)
+      
+      if os.path.isfile(file_path):
+          os.remove(file_path)
+
   g = tf.Graph()
   with g.as_default():
     model_config = configuration.ModelConfig()
@@ -256,7 +276,7 @@ def main(_):
       with open(FLAGS.feature_file, "rb") as f:
         test_data = pkl.load(f)
 
-      test_ids = test_data.keys()
+      test_ids = list(test_data.keys())
       test_feat = np.zeros((len(test_ids) + 1,
                             len(test_data[test_ids[0]]["image_rnn_feat"])))
       test_emb = np.zeros((len(test_ids),
@@ -272,6 +292,7 @@ def main(_):
 
       # load queries from JSON file
       queries = json.load(open(FLAGS.query_file))
+
       # Get the word embedding.
       [word_emb] = sess.run([model.embedding_map])
 
@@ -300,7 +321,7 @@ def main(_):
             try:
               test_idx.append(test_ids.index(name))
             except:
-              print('not found')
+              print('not found2')
               return
 
           # Calculate the word embedding
@@ -332,3 +353,4 @@ def main(_):
 
 if __name__ == "__main__":
   tf.app.run()
+
