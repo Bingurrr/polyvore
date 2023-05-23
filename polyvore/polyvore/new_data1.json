@@ -1,0 +1,38 @@
+[
+    {
+        "name": "clothes",
+        "set_url": "",
+        "image": "",
+        "desc": "",
+        "set_id": "2",
+        "views": 100,
+        "date": "years",
+        "items": [
+            {
+                "name": "white Tshrit",
+                "index": 1,
+                "price": 20,
+                "likes": 20,
+                "categoryid": 77,
+                "image": "http://img2.polyvoreimg.com/cgi/img-thing?.out=jpg&size=m&tid=102972440"
+            },
+            {
+                "name": "Delt logo cap white",
+                "index": 2,
+                "price": 20,
+                "likes": 20,
+                "categoryid": 1035,
+                "image": "http://img2.polyvoreimg.com/cgi/img-thing?.out=jpg&size=m&tid=91303250"
+            },
+            {
+                "name": "blue gray shoes",
+                "index": 3,
+                "price": 36.0,
+                "likes": 254,
+                "categoryid": 1693,
+                "image": "http://img1.polyvoreimg.com/cgi/img-thing?.out=jpg&size=m&tid=94989504"
+            }
+        ],
+        "likes": 100
+    }
+]
